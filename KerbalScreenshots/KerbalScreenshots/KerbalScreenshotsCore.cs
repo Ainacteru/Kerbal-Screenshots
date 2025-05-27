@@ -6,8 +6,13 @@ namespace KerbalScreenshots
 
     public class KerbalScreenshotsCore : MonoBehaviour {
 
+        public KeyCode screenshot = KeyCode.F2;
+
         private void Update() {
-            Debug.Log("KERBAL SCREENSHOTS WORKS!!! yay");
+
+            if (Input.GetKey(screenshot)){
+                Debug.Log("KERBAL SCREENSHOTS WORKS!!! yay");
+            }
         }
     }
 }
