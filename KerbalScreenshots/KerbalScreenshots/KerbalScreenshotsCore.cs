@@ -6,7 +6,7 @@ namespace KerbalScreenshots
 
     public class KerbalScreenshotsCore : MonoBehaviour {
 
-        private void Start() {
+        private void Update() {
             Debug.Log("KERBAL SCREENSHOTS WORKS!!! yay");
         }
     }
