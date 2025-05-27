@@ -1,7 +1,11 @@
-﻿namespace KerbalScreenshots
+﻿using UnityEngine;
+
+namespace KerbalScreenshots
 {
-    public class KerbalScreenshotsCore
+    [KSPAddon(KSPAddon.Startup.MainMenu, true)]
+    public class KerbalScreenshotsCore : MonoBehaviour
     {
 
     }
 }
+// add these as references
