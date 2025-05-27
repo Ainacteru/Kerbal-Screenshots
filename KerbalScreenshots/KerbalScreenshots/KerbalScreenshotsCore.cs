@@ -15,4 +15,3 @@ namespace KerbalScreenshots
         }
     }
 }
-// add these as references
