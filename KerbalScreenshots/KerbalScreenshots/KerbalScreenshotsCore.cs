@@ -10,7 +10,7 @@ namespace KerbalScreenshots
 
         private void Update() {
 
-            if (Input.GetKey(screenshot)){
+            if (Input.GetKeyDown(screenshot)){
                 Debug.Log("KERBAL SCREENSHOTS WORKS!!! yay");
             }
         }
