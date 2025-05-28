@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36109.1 d17.14
+VisualStudioVersion = 17.14.36121.58 d17.14
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KerbalScreenshots", "KerbalScreenshots\KerbalScreenshots.csproj", "{FA732903-6A2B-4777-978E-F7594500AEED}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KerbalScreenshots", "KerbalScreenshots\KerbalScreenshots.csproj", "{73D982E6-5FFD-47A7-AFBF-D79E70B698E9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{FA732903-6A2B-4777-978E-F7594500AEED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FA732903-6A2B-4777-978E-F7594500AEED}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FA732903-6A2B-4777-978E-F7594500AEED}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FA732903-6A2B-4777-978E-F7594500AEED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{73D982E6-5FFD-47A7-AFBF-D79E70B698E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73D982E6-5FFD-47A7-AFBF-D79E70B698E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73D982E6-5FFD-47A7-AFBF-D79E70B698E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73D982E6-5FFD-47A7-AFBF-D79E70B698E9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {D050A3D7-D77E-429A-8384-22FF54ADC168}
+		SolutionGuid = {4ECA2BA0-732B-4713-A876-D0A8EAF148B0}
 	EndGlobalSection
 EndGlobal
