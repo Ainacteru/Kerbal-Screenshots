@@ -17,7 +17,7 @@ namespace KerbalScreenshots
             if (Input.GetKeyDown(screenshot))
             {
                 string @finalFile = @filePath + @fileName + ".png";
-                //ScreenCapture.CaptureScreenshot(finalFile);
+                ScreenCapture.CaptureScreenshot(finalFile);
                 Debug.Log("Screenshot Taken at " + @finalFile);
             }
         }
