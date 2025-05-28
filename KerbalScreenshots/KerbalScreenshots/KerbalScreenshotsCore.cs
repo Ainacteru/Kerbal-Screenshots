@@ -12,7 +12,7 @@ namespace KerbalScreenshots
 
         private void Update()
         {
-            string filePath = Path.Combine(Application.dataPath, "GameData/KerbalScreenshots/LoadingScreens/");
+            string filePath = Path.Combine(Directory.GetParent(Application.dataPath).FullName, "GameData/KerbalScreenshots/LoadingScreens/");
 
             if (Input.GetKeyDown(screenshot))
             {
