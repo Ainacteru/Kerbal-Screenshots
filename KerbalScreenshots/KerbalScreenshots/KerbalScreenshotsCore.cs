@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace KerbalScreenshots
 {
-    [KSPAddon(KSPAddon.Startup.AllGameScenes, true)]
+    [KSPAddon(KSPAddon.Startup.AllGameScenes, false)]
     public class KerbalScreenshotsCore : MonoBehaviour
     {
 
