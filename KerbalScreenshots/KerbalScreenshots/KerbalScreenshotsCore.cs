@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 namespace KerbalScreenshots
 {
@@ -10,14 +11,14 @@ namespace KerbalScreenshots
 
         private void Update()
         {
-            string filePath = "GameData\\KerbalScreenshots\\LoadingScreens\\";
-            string fileName = "test";
+            string filePath = @"GameData\KerbalScreenshots\LoadingScreens\";
+            string fileName = "kerbalscrn_" + DateTime.Now.ToString("yy-MM-dd_HH-mm-ss.fff");
 
             if (Input.GetKeyDown(screenshot))
             {
-                string finalFile = filePath + fileName + ".png";
+                string @finalFile = @filePath + @fileName + ".png";
                 //ScreenCapture.CaptureScreenshot(finalFile);
-                Debug.Log("Screenshot Taken at " + finalFile);
+                Debug.Log("Screenshot Taken at " + @finalFile);
             }
         }
     }
