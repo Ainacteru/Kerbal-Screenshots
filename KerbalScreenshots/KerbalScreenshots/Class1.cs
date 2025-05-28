@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace KerbalScreenshots
 {
@@ -7,11 +7,17 @@ namespace KerbalScreenshots
     {
 
         public KeyCode screenshot = KeyCode.F2;
+
         private void Update()
         {
+            string filePath = "GameData\\KerbalScreenshots\\LoadingScreens\\";
+            string fileName = "test";
+
             if (Input.GetKeyDown(screenshot))
             {
-                Debug.Log("KERBAL SCREENSHOTS WORKS!!! yay");
+                string finalFile = filePath + fileName + ".png";
+                //ScreenCapture.CaptureScreenshot(finalFile);
+                Debug.Log("Screenshot Taken at " + finalFile);
             }
         }
     }
