@@ -12,7 +12,7 @@ namespace KerbalScreenshots
         private void Update()
         {
             string filePath = @"GameData\KerbalScreenshots\LoadingScreens\";
-            string fileName = "kerbalscrn_" + DateTime.Now.ToString("yy-MM-dd_HH-mm-ss.fff");
+            string fileName = "kerbalscrn_" + DateTime.Now.ToString("yyyy-MM-dd_HH-mm-ss.fff");
 
             if (Input.GetKeyDown(screenshot))
             {
