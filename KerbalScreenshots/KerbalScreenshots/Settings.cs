@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using UnityEngine;
 
 // settings code ALSO taken straight from PRE's source code. thanks lisias
@@ -51,6 +47,7 @@ namespace KerbalScreenshots
 
                 settings.SetValue("ScreenshotKey", ScreenshotKey.ToString());
                 fileNode.Save(SettingsConfigUrl);
+                
             }
             catch (Exception ex)
             {

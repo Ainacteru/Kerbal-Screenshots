@@ -17,12 +17,10 @@ namespace KerbalScreenshots
         public static Gui Fetch;
         public static bool GuiEnabled;
         private ApplicationLauncherButton button = null;
-        private readonly float _incrButtonWidth = 26;
         private readonly float contentWidth = WindowWidth - 2 * LeftIndent;
         private readonly float entryHeight = 20;
 
         private bool _gameUiToggle;
-        private KeyCode screenshotKey = KeyCode.F1;
 
         private float _windowHeight = 250;
         private Rect _windowRect;
@@ -42,7 +40,7 @@ namespace KerbalScreenshots
             GameEvents.onHideUI.Add(GameUiDisable);
             GameEvents.onShowUI.Add(GameUiEnable);
             _gameUiToggle = true;
-            screenshotKey = Settings.ScreenshotKey;
+            KerbalScreenshotsCore.screenshotKey = Settings.ScreenshotKey;
         }
 
         private void OnDestroy()
@@ -88,7 +86,7 @@ namespace KerbalScreenshots
         {
             try
             {
-                screenshotKey = Settings.ScreenshotKey;
+                KerbalScreenshotsCore.screenshotKey = Settings.ScreenshotKey;
             }
             catch (Exception e)
             {
