@@ -1,0 +1,4 @@
+KerbalScreeshotsSettings
+{
+	ScreenshotKey = F1
+}

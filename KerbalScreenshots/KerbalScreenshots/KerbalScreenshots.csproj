@@ -41,8 +41,16 @@
     <Reference Include="UnityEngine">
       <HintPath>..\..\..\..\..\..\..\Program Files\Epic Games\KerbalSpaceProgram\English\KSP_x64_Data\Managed\UnityEngine.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEngine.AnimationModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files\Epic Games\KerbalSpaceProgram\English\KSP_x64_Data\Managed\UnityEngine.AnimationModule.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine.CoreModule">
       <HintPath>..\..\..\..\..\..\..\Program Files\Epic Games\KerbalSpaceProgram\English\KSP_x64_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.IMGUIModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files\Epic Games\KerbalSpaceProgram\English\KSP_x64_Data\Managed\UnityEngine.IMGUIModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.InputLegacyModule">
       <HintPath>..\..\..\..\..\..\..\Program Files\Epic Games\KerbalSpaceProgram\English\KSP_x64_Data\Managed\UnityEngine.InputLegacyModule.dll</HintPath>
@@ -50,13 +58,19 @@
     <Reference Include="UnityEngine.ScreenCaptureModule">
       <HintPath>..\..\..\..\..\..\..\Program Files\Epic Games\KerbalSpaceProgram\English\KSP_x64_Data\Managed\UnityEngine.ScreenCaptureModule.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEngine.TextRenderingModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files\Epic Games\KerbalSpaceProgram\English\KSP_x64_Data\Managed\UnityEngine.TextRenderingModule.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine.UI">
       <HintPath>..\..\..\..\..\..\..\Program Files\Epic Games\KerbalSpaceProgram\English\KSP_x64_Data\Managed\UnityEngine.UI.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GUI.cs" />
     <Compile Include="KerbalScreenshotsCore.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Settings.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
