@@ -8,7 +8,7 @@ namespace KerbalScreenshots
     public class KerbalScreenshotsCore : MonoBehaviour
     {
 
-        public KeyCode screenshot = KeyCode.F2;
+        public KeyCode screenshot = KeyCode.F1;
 
         private void Update()
         {
