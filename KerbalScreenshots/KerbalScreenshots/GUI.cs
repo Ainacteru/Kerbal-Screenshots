@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Globalization;
 using KSP.UI.Screens;
 using UnityEngine;
 
@@ -40,7 +39,6 @@ namespace KerbalScreenshots
             GameEvents.onHideUI.Add(GameUiDisable);
             GameEvents.onShowUI.Add(GameUiEnable);
             _gameUiToggle = true;
-            KerbalScreenshotsCore.screenshotKey = Settings.ScreenshotKey;
         }
 
         private void OnDestroy()
@@ -74,10 +72,10 @@ namespace KerbalScreenshots
             _windowRect.height = _windowHeight;
         }
 
-        
+
         private void DrawSaveButton(float line)
         {
-            var saveRect = new Rect(LeftIndent, ContentTop + line * entryHeight, contentWidth * 0.8f, entryHeight);
+            var saveRect = new Rect(LeftIndent, ContentTop + line * entryHeight, contentWidth * 0.7f, entryHeight);
             if (GUI.Button(saveRect, "Change screenshot key"))
                 Apply();
         }
@@ -87,6 +85,7 @@ namespace KerbalScreenshots
             try
             {
                 KerbalScreenshotsCore.screenshotKey = Settings.ScreenshotKey;
+                Debug.Log("Kerbal Screenshots: Screenshot hotkey set to " + KerbalScreenshotsCore.screenshotKey);
             }
             catch (Exception e)
             {
@@ -125,7 +124,7 @@ namespace KerbalScreenshots
         private void EnableGui()
         {
             GuiEnabled = true;
-            Debug.Log("Kerbal Screenshots: Showing GUI ('Courtesy' of lisias & Physics Range Extender!)");
+            Debug.Log("Kerbal Screenshots: Showing GUI (''Courtesy'' of lisias & Physics Range Extender!)");
         }
 
         private void DisableGui()

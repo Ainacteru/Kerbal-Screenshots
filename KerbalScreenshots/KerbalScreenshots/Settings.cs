@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using UnityEngine;
 
 // settings code ALSO taken straight from PRE's source code. thanks lisias
@@ -9,31 +10,38 @@ namespace KerbalScreenshots
     public class Settings : MonoBehaviour
     {
         public static string SettingsConfigUrl = "GameData/KerbalScreenshots/settings.cfg";
-        public static KeyCode ScreenshotKey { get; set; }
+        public static KeyCode ScreenshotKey { get; set; } = KeyCode.F1;
         public static bool ConfigLoaded { get; set; } = false;
-
-        void Awake()
-        {
-            LoadConfig();
-            ConfigLoaded = true;
-        }
 
         public static void LoadConfig()
         {
             try
             {
-                Debug.Log("Kerbal Screenshots: Loading settings.cfg ==");
+                Debug.Log("Kerbal Screenshots: Loading settings.cfg...");
 
                 ConfigNode fileNode = ConfigNode.Load(SettingsConfigUrl);
-                if (!fileNode.HasNode("KerbalScreenshotsSettings")) return;
+                if (!fileNode.HasNode("KerbalScreenshotsSettings"))
+                {
+                    Debug.Log("Kerbal Screenshots: No `settings.cfg` file found @ " + SettingsConfigUrl);
+                    return;
+                }
 
                 ConfigNode settings = fileNode.GetNode("KerbalScreenshotsSettings");
-                ScreenshotKey = (KeyCode) System.Enum.Parse(typeof(KeyCode), settings.GetValue("ScreenshotKey"));
-                Debug.Log("Kerbal Screenshots: Screenshot hotkey set to " + ScreenshotKey);
+                ScreenshotKey = (KeyCode)System.Enum.Parse(typeof(KeyCode), settings.GetValue("ScreenshotKey"));
+                if (ScreenshotKey != KeyCode.None)
+                {
+                    KerbalScreenshotsCore.screenshotKey = ScreenshotKey;
+                    Debug.Log("Kerbal Screenshots: Screenshot hotkey set to " + KerbalScreenshotsCore.screenshotKey);
+                }
+                else
+                {
+                    KerbalScreenshotsCore.screenshotKey = KeyCode.F1;
+                    Debug.Log("Kerbal Screenshots: Screenshot hotkey set to default (F1)");
+                }
             }
             catch (Exception ex)
             {
-                Debug.Log("Kerbal Screenshots: failed to load settings config:" + ex.Message);
+                Debug.Log("Kerbal Screenshots: Failed to load settings config:" + ex.Message);
             }
         }
 
@@ -41,14 +49,18 @@ namespace KerbalScreenshots
         {
             try
             {
-                Debug.Log("Kerbal Screenshots: saving settings.cfg ==");
                 ConfigNode fileNode = ConfigNode.Load(SettingsConfigUrl);
-                if (!fileNode.HasNode("KerbalScreenshotsSettings")) return;
+                if (!fileNode.HasNode("KerbalScreenshotsSettings"))
+                {
+                    Debug.Log("Kerbal Screenshots: No `settings.cfg` file found @ " + SettingsConfigUrl);
+                    return;
+                }
                 ConfigNode settings = fileNode.GetNode("KerbalScreenshotsSettings");
 
                 settings.SetValue("ScreenshotKey", ScreenshotKey.ToString());
+                Debug.Log("Kerbal Screenshots: `settings.cfg` saved!");
                 fileNode.Save(SettingsConfigUrl);
-                
+
             }
             catch (Exception ex)
             {
