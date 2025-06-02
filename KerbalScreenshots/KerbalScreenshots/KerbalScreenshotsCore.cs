@@ -8,13 +8,13 @@ namespace KerbalScreenshots
     public class KerbalScreenshotsCore : MonoBehaviour
     {
 
-        public KeyCode screenshot = KeyCode.F2;
+        public static KeyCode screenshotKey { get; set; } = Settings.ScreenshotKey;
 
         private void Update()
         {
             string filePath = Path.Combine(Directory.GetParent(Application.dataPath).FullName, "UserLoadingScreens/");
 
-            if (Input.GetKeyDown(screenshot))
+            if (Input.GetKeyDown(screenshotKey))
             {
                 string finalFile;
                 string time = DateTime.Now.ToString("yyyy-MM-dd_HH-mm-ss.fff");
