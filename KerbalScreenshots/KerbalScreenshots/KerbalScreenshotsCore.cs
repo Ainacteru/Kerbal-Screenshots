@@ -2,30 +2,39 @@
 using System.IO;
 using UnityEngine;
 
-namespace KerbalScreenshots
-{
+namespace KerbalScreenshots {
+
     [KSPAddon(KSPAddon.Startup.AllGameScenes, false)]
-    public class KerbalScreenshotsCore : MonoBehaviour
-    {
+    public class KerbalScreenshotsCore : MonoBehaviour {
 
         public static KeyCode screenshotKey { get; set; } = Settings.ScreenshotKey;
 
-        private void Update()
-        {
+        private void Start() {
+            Debug.Log("Screenshot key is currently: " + screenshotKey);
+            
+            if(screenshotKey == null) {
+                screenshotKey = KeyCode.F1;
+            }
+        }
+
+        private void Update() {
+
             string filePath = Path.Combine(Directory.GetParent(Application.dataPath).FullName, "UserLoadingScreens/");
 
-            if (Input.GetKeyDown(screenshotKey))
-            {
+            if (Input.GetKeyDown(screenshotKey)) {
+
                 string finalFile;
                 string time = DateTime.Now.ToString("yyyy-MM-dd_HH-mm-ss.fff");
-                if (time.Contains("000"))
-                {
+
+                if (time.Contains("000")) {
+
                     finalFile = filePath + "quiz_" + time + ".png";
                 }
-                else
-                {
+                else {
+
                     finalFile = filePath + "kerbalscrn_" + time + ".png";
                 }
+
                 ScreenCapture.CaptureScreenshot(finalFile);
                 Debug.Log("Screenshot saved to " + finalFile);
             }

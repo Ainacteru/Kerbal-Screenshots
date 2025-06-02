@@ -42,6 +42,7 @@ namespace KerbalScreenshots
             {
                 Debug.Log("Kerbal Screenshots: saving settings.cfg ==");
                 ConfigNode fileNode = ConfigNode.Load(SettingsConfigUrl);
+                
                 if (!fileNode.HasNode("KerbalScreenshotsSettings")) return;
                 ConfigNode settings = fileNode.GetNode("KerbalScreenshotsSettings");
 
