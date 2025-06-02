@@ -77,7 +77,7 @@ namespace KerbalScreenshots
         
         private void DrawSaveButton(float line)
         {
-            var saveRect = new Rect(LeftIndent, ContentTop + line * entryHeight, contentWidth / 2, entryHeight);
+            var saveRect = new Rect(LeftIndent, ContentTop + line * entryHeight, contentWidth * 0.8f, entryHeight);
             if (GUI.Button(saveRect, "Change screenshot key"))
                 Apply();
         }

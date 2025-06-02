@@ -8,7 +8,7 @@ namespace KerbalScreenshots
     public class KerbalScreenshotsCore : MonoBehaviour
     {
 
-        public static KeyCode screenshotKey { get; set; } = Settings.ScreenshotKey;
+        public static KeyCode screenshotKey { get; set; } = KeyCode.F2;
 
         private void Update()
         {
@@ -27,7 +27,8 @@ namespace KerbalScreenshots
                     finalFile = filePath + "kerbalscrn_" + time + ".png";
                 }
                 ScreenCapture.CaptureScreenshot(finalFile);
-                Debug.Log("Screenshot saved to " + finalFile);
+                Debug.Log("Kerbal Screenshots: Screenshot captured with " + screenshotKey);
+                Debug.Log("Kerbal Screenshots: Screenshot saved to " + finalFile);
             }
         }   
     }

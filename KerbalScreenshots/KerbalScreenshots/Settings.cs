@@ -29,6 +29,7 @@ namespace KerbalScreenshots
 
                 ConfigNode settings = fileNode.GetNode("KerbalScreenshotsSettings");
                 ScreenshotKey = (KeyCode) System.Enum.Parse(typeof(KeyCode), settings.GetValue("ScreenshotKey"));
+                Debug.Log("Kerbal Screenshots: Screenshot hotkey set to " + ScreenshotKey);
             }
             catch (Exception ex)
             {
