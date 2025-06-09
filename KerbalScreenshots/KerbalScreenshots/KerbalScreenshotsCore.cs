@@ -31,8 +31,8 @@ namespace KerbalScreenshots
                     finalFile = filePath + "kerbalscrn_" + time + ".png";
                 }
                 ScreenCapture.CaptureScreenshot(finalFile);
-                Debug.Log("Kerbal Screenshots: Screenshot captured with " + screenshotKey);
-                Debug.Log("Kerbal Screenshots: Screenshot saved to " + finalFile);
+                Log("Kerbal Screenshots: Screenshot captured with " + screenshotKey);
+                Log("Kerbal Screenshots: Screenshot saved to " + finalFile);
             }
         }
 

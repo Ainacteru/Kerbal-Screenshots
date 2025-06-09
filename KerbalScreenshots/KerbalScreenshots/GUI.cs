@@ -92,15 +92,13 @@ namespace KerbalScreenshots
 
             if (awaitingInput)
             {
-                KeyCode newKey = KeyCode.F1;
-
                 if (Input.anyKeyDown)
                 {
                     foreach (KeyCode keyCode in System.Enum.GetValues(typeof(KeyCode)))
                     {
                         if (Input.GetKey(keyCode))
                         {
-                            newKey = keyCode;
+                            Settings.ScreenshotKey = keyCode;
                             awaitingInput = false;
                             Apply();
                         }
@@ -115,7 +113,8 @@ namespace KerbalScreenshots
             if (GUI.Button(saveRect, buttonText))
             {
                 Settings.loggingEnabled = !Settings.loggingEnabled;
-                Apply();
+                Debug.Log("Kerbal Screenshots: Logging disabled");
+                Settings.SaveConfig();
             }
         }
 
