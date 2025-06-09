@@ -82,7 +82,7 @@ namespace KerbalScreenshots
 
         private void DrawRebindButton(float line)
         {
-            string buttonText = "Current: " + Settings.ScreenshotKey.ToString() + "(click to set)";
+            string buttonText = "Current: " + Settings.ScreenshotKey.ToString() + " (click to set)";
             var saveRect = new Rect(LeftIndent, ContentTop + line * entryHeight, contentWidth - 2 * LeftIndent, entryHeight);
             
             if (GUI.Button(saveRect, buttonText))
