@@ -12,9 +12,6 @@ namespace KerbalScreenshots
             Settings.LoadConfig();
             Settings.ConfigLoaded = true;
         }
-
-
-
         public static KeyCode screenshotKey { get; set; } = KeyCode.F1;
 
         private void Update()
@@ -36,6 +33,14 @@ namespace KerbalScreenshots
                 ScreenCapture.CaptureScreenshot(finalFile);
                 Debug.Log("Kerbal Screenshots: Screenshot captured with " + screenshotKey);
                 Debug.Log("Kerbal Screenshots: Screenshot saved to " + finalFile);
+            }
+        }
+
+        public static void Log(string logMessage)
+        {
+            if (Settings.loggingEnabled)
+            {
+                Debug.Log(logMessage);
             }
         }
     }
