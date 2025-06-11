@@ -113,7 +113,8 @@ namespace KerbalScreenshots
             if (GUI.Button(saveRect, buttonText))
             {
                 Settings.loggingEnabled = !Settings.loggingEnabled;
-                Debug.Log("Kerbal Screenshots: Logging disabled");
+                string which = Settings.loggingEnabled ? "enabled" : "disabled";
+                Debug.Log($"Kerbal Screenshots: Logging {which}");
                 Settings.SaveConfig();
             }
         }
